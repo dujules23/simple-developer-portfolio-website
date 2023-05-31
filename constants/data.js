@@ -10,7 +10,7 @@ const userData = {
     {
       title: "Q and Sons Cleaning",
       link: "https://qsonscleaning.com",
-      imgUrl: "/qandsons.jpg",
+      imgUrl: "/qandsons.png",
     },
     {
       title: "IMDb Clone",
@@ -18,34 +18,9 @@ const userData = {
       imgUrl: "/imdb.png",
     },
     {
-      title: "Portfolio",
-      link: "https://manuarora.in",
-      imgUrl: "/portfolio.png",
-    },
-    {
-      title: "CovidRescue",
-      link: "https://covidrescue.co.in",
-      imgUrl: "/covidrescue.png",
-    },
-    {
-      title: "Algochurn",
-      link: "https://algochurn.com",
-      imgUrl: "/algochurn.png",
-    },
-    {
-      title: "Playground",
-      link: "https://play.placeholdertech.in",
-      imgUrl: "/playground.png",
-    },
-    {
-      title: "Feedmeback",
-      link: "https://feedmeback.vercel.app",
-      imgUrl: "/feedmeback.png",
-    },
-    {
-      title: "Devmedium",
-      link: "https://devmedium.vercel.app",
-      imgUrl: "/devmedium.png",
+      title: "Google Clone",
+      link: "https://google-clone-nextjs13-two.vercel.app/",
+      imgUrl: "/google.png",
     },
   ],
   about: {

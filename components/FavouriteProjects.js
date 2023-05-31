@@ -42,7 +42,7 @@ export default function FavouriteProjects() {
             <div className="relative overflow-hidden">
               <img
                 src="/qandsons.png"
-                alt="portfolio"
+                alt="business-site"
                 className="transform hover:scale-125 transition duration-2000 ease-out"
               />
               <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
@@ -55,14 +55,14 @@ export default function FavouriteProjects() {
           </a>
           {/* Single card */}
           <a
-            href="https://placeholdertech.in"
+            href="https://imdb-clone-practice-project.vercel.app/"
             className="w-full block col-span-3  sm:col-span-2 shadow-2xl"
           >
             <div className="relative overflow-hidden">
               {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
               <img
                 src="/imdb.png"
-                alt="portfolio"
+                alt="imdb-clone"
                 className="transform hover:scale-125 transition duration-2000 ease-out"
               />
               <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
@@ -75,18 +75,18 @@ export default function FavouriteProjects() {
           </a>
           {/* Single card */}
           <a
-            href="https://manuarora.in"
+            href="https://google-clone-nextjs13-two.vercel.app/"
             className="w-full block col-span-3 sm:col-span-1  object-cover"
           >
             <div className="relative overflow-hidden shadow-2xl">
               {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
               <img
-                src="/portfolio.png"
-                alt="portfolio"
+                src="/google.png"
+                alt="google-clone"
                 className="transform hover:scale-125 transition duration-2000 ease-out object-cover shadow-2xl"
               />
               <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                Portfolio
+                Google Clone
               </h1>
               <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
                 03
