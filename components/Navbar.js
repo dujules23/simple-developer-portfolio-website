@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
@@ -31,7 +33,7 @@ export default function Navbar() {
         <div className="space-x-8 hidden md:block">
           <Link
             href="/about"
-            className={`text-base  ${
+            className={`text-base ${
               router.asPath === "/about"
                 ? "text-gray-800 font-bold dark:text-gray-400"
                 : "text-gray-600 dark:text-gray-300 font-normal "
@@ -211,7 +213,7 @@ export default function Navbar() {
       <div className="space-x-8 block md:hidden mt-4">
         <Link
           href="/about"
-          className="text-base font-normal text-gray-600 dark:text-gray-300"
+          className="text-base font-normal text-gray-600 dark:text-gray-300 transform hover:bg-color-1000"
         >
           About
         </Link>

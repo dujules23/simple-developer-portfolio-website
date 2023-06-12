@@ -1,7 +1,37 @@
+"use client";
+
 import React from "react";
 import userData from "@constants/data";
 
 export default function Contact() {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const data = {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      message: event.target.message.value,
+    };
+
+    console.log(data.email);
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      console.log("Message sent successfully");
+    }
+
+    if (!response.ok) {
+      console.log("Error sending message");
+    }
+  };
+
   return (
     <section>
       <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800 antialiased">
@@ -141,7 +171,10 @@ export default function Contact() {
               </a>
             </div>
           </div>
-          <form className="form rounded-lg bg-white p-4 flex flex-col">
+          <form
+            onSubmit={handleSubmit}
+            className="form rounded-lg bg-white p-4 flex flex-col"
+          >
             <label htmlFor="name" className="text-sm text-gray-600 mx-4">
               {" "}
               Your Name

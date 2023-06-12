@@ -10,6 +10,14 @@ module.exports = {
         2000: "2000ms",
         4000: "4000ms",
       },
+      colors: {
+        blue: {
+          1000: "#3B82F6",
+        },
+      },
+      backgroundSize: {
+        16: "4rem",
+      },
     },
   },
   variants: {
