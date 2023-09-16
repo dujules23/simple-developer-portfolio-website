@@ -5,10 +5,6 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import userData from "@constants/data";
-import { ArrowDown } from "./logos/ArrowDown";
-import { InstagramLogo } from "./logos/InstagramLogo";
-import { LinkedInLogo } from "./logos/LinkedInLogo";
-import { TwitterLogo } from "./logos/TwitterLogo";
 
 export default function Navbar() {
   const router = useRouter();
@@ -36,46 +32,43 @@ export default function Navbar() {
         <div className="space-x-8 hidden md:block">
           <Link
             href="/about"
-            className={`text-base ${
+            className={`text-base transform duration-500 hover:text-blue-1000 dark:hover:text-blue-1000 ${
               router.asPath === "/about"
-                ? "text-gray-800 font-bold dark:text-gray-400"
+                ? "text-gray-800 font-bold dark:text-gray-400 underline"
                 : "text-gray-600 dark:text-gray-300 font-normal "
             }`}
           >
-            About {router.asPath === "/about" && <ArrowDown fill="gray" />}
+            About
           </Link>
           <Link
             href="/projects"
-            className={`text-base  ${
+            className={`text-base transform duration-500 hover:text-blue-1000 dark:hover:text-blue-1000  ${
               router.asPath === "/projects"
-                ? "text-gray-800 font-bold dark:text-gray-400"
+                ? "text-gray-800 font-bold dark:text-gray-400 underline"
                 : "text-gray-600 dark:text-gray-300 font-normal "
             }`}
           >
             Projects
-            {router.asPath === "/projects" && <ArrowDown fill="gray" />}
           </Link>
           <Link
             href="/experience"
-            className={`text-base  ${
+            className={`text-base transform duration-500 hover:text-blue-1000 dark:hover:text-blue-1000  ${
               router.asPath === "/experience"
-                ? "text-gray-800 font-bold dark:text-gray-400"
+                ? "text-gray-800 font-bold dark:text-gray-400 underline"
                 : "text-gray-600 dark:text-gray-300 font-normal "
             }`}
           >
             Experience{" "}
-            {router.asPath === "/experience" && <ArrowDown fill="gray" />}
           </Link>
           <Link
             href="/contact"
-            className={`text-base  ${
+            className={`text-base transform duration-500 hover:text-blue-1000 dark:hover:text-blue-1000 ${
               router.asPath === "/contact"
-                ? "text-gray-800 font-bold dark:text-gray-400"
+                ? "text-gray-800 font-bold dark:text-gray-400 underline"
                 : "text-gray-600 dark:text-gray-300 font-normal "
             }`}
           >
             Contact
-            {router.asPath === "/contact" && <ArrowDown fill="gray" />}
           </Link>
         </div>
 
@@ -84,25 +77,27 @@ export default function Navbar() {
             href={userData.socialLinks.instagram}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <InstagramLogo
-              fill={theme === "dark" ? "rgb(209 213 219" : "rgb(75 85 99)"}
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/87/87390.png"
+              className="invert-0 dark:invert h-6 w-6"
             />
           </a>
           <a
             href={userData.socialLinks.twitter}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <TwitterLogo
-              type="bird"
-              fill={theme === "dark" ? "rgb(209 213 219" : "rgb(75 85 99)"}
+            <img
+              src="./twitter-bird.svg"
+              className="invert-0 dark:invert h-6 w-6"
             />
           </a>
           <a
             href={userData.socialLinks.linkedin}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <LinkedInLogo
-              fill={theme === "dark" ? "rgb(209 213 219" : "rgb(75 85 99)"}
+            <img
+              src="./linkedin-logo.svg"
+              className="invert-0 dark:invert h-6 w-6"
             />
           </a>
           <button
@@ -142,25 +137,33 @@ export default function Navbar() {
       <div className="space-x-8 block md:hidden mt-4">
         <Link
           href="/about"
-          className="text-base font-normal text-gray-600 dark:text-gray-300 transform hover:bg-color-1000"
+          className={`text-base font-normal text-gray-600 dark:text-gray-300 ${
+            router.asPath === "/about" && "underline"
+          }`}
         >
           About
         </Link>
         <Link
           href="/projects"
-          className="text-base font-normal text-gray-600 dark:text-gray-300"
+          className={`text-base font-normal text-gray-600 dark:text-gray-300 ${
+            router.asPath === "/projects" && "underline"
+          }`}
         >
           Projects
         </Link>
         <Link
           href="/experience"
-          className="text-base font-normal text-gray-600 dark:text-gray-300"
+          className={`text-base font-normal text-gray-600 dark:text-gray-300 ${
+            router.asPath === "/experience" && "underline"
+          }`}
         >
           Experience
         </Link>
         <Link
           href="/contact"
-          className="text-base font-normal text-gray-600 dark:text-gray-300"
+          className={`text-base font-normal text-gray-600 dark:text-gray-300 ${
+            router.asPath === "/contact" && "underline"
+          }`}
         >
           Contact
         </Link>
