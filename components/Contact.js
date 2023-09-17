@@ -35,7 +35,8 @@ export default function Contact() {
       },
     }));
 
-  const onSubmit = async () => {
+  const onSubmit = async (e) => {
+    e.preventDefault();
     setState((prev) => ({
       ...prev,
       isLoading: true,
@@ -43,6 +44,7 @@ export default function Contact() {
 
     try {
       const response = await sendContactForm(values);
+      console.log(response);
       if (response.status === 400) {
         console.log("Error, message did not send");
       } else if (response.ok) {
@@ -193,7 +195,7 @@ export default function Contact() {
           </div>
 
           <form
-            onSubmit={onSubmit}
+            // onSubmit={ }
             className="form rounded-lg bg-white p-4 flex flex-col mt-6"
           >
             {error && <div className="text-red-500 justify-end">{error}</div>}
@@ -236,14 +238,10 @@ export default function Contact() {
               onChange={handleChange}
             ></textarea>
             <button
+              onClick={onSubmit}
               variant="outline"
               type="submit"
-              className="bg-blue-500 disabled:bg-gray-400 rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold"
-              disabled={
-                !state.values.name ||
-                !state.values.email ||
-                !state.values.message
-              }
+              className="bg-blue-800 hover:bg-blue-500 transition cursor-pointer rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold"
             >
               Send Message
             </button>
