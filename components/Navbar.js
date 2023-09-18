@@ -60,7 +60,7 @@ export default function Navbar() {
           >
             Experience{" "}
           </Link>
-          <Link
+          {/* <Link
             href="/contact"
             className={`text-base transform duration-500 hover:text-blue-1000 dark:hover:text-blue-1000 ${
               router.asPath === "/contact"
@@ -69,7 +69,7 @@ export default function Navbar() {
             }`}
           >
             Contact
-          </Link>
+          </Link> */}
         </div>
 
         <div className="space-x-4 flex flex-row items-center">

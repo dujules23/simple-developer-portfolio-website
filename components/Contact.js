@@ -24,8 +24,6 @@ export default function Contact() {
   const failedMessage = () =>
     toast.warning("Message could not be sent. Please try again");
 
-  console.log(state);
-
   const handleChange = ({ target }) =>
     setState((prev) => ({
       ...prev,
