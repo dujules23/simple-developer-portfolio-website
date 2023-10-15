@@ -22,6 +22,11 @@ const userData = {
       link: "https://google-clone-nextjs13-two.vercel.app/",
       imgUrl: "/google.png",
     },
+    {
+      title: "Instagram Clone",
+      link: "https://insta-v1.vercel.app/",
+      imgUrl: "/insta.png",
+    },
   ],
   about: {
     title:
