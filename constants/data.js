@@ -13,6 +13,11 @@ const userData = {
       imgUrl: "/qandsons.png",
     },
     {
+      title: "Test Fighting Game",
+      link: "https://github.com/dujules23/test-fg",
+      imgUrl: "/FightingGame.png",
+    },
+    {
       title: "IMDb Clone",
       link: "https://imdb-clone-practice-project.vercel.app/",
       imgUrl: "/imdb.png",
