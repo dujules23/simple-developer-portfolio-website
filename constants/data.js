@@ -8,6 +8,11 @@ const userData = {
   address: "Blythewood, South Carolina, USA",
   projects: [
     {
+      title: "HBCU Database",
+      link: "https://hbcu-search.vercel.app/",
+      imgUrl: "/hbcu-search.png",
+    },
+    {
       title: "Cleaning Website",
       link: "https://business-site-tau.vercel.app/",
       imgUrl: "/qandsons.png",
